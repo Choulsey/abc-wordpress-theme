@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.wrapper-navbar {
+  background: #fff;
+
+  .navbar {
+    background: #fff!important;
+
+    #searchsubmit {
+      font-family: FontAwesome;
+    }
+
+    .active {
+
+      .nav-link {
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+
+    .nav-link {
+      color:#1B7195;
+
+      &:hover {
+        color: #000;
+      }
+
+      &:active {
+        color: #000;
+      }
+    }
+  }
+}
+
+#wrapper-footer {
+  background: #999;
+}

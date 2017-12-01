@@ -258,10 +258,26 @@ gulp.task('dist', ['clean-dist'], function() {
     .pipe(gulp.dest('dist/'))
 });
 
+//var clean = require('gulp-clean');
+//.pipe(clean({force: true}))
+
+// Run
+// gulp dist
+// Copies the files to the /dist folder for distributon
+gulp.task('dist-local', function() {
+    gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!dist/**','!sass','!sass/**','!readme.txt','!readme.md','!package.json','!gulpfile.js','!CHANGELOG.md','!.travis.yml','!jshintignore', '!codesniffer.ruleset.xml', '*'])
+    .pipe(gulp.dest('../abc-wp/wp-content/themes/understrap-child/'))
+});
+
 // Deleting any file inside the /src folder
 gulp.task('clean-dist', function () {
   return del(['dist/**/*',]);
 });
+
+// Deleting any file inside the /src folder
+//gulp.task('clean-dist-local', function () {
+  //return del(['../abc-wp/wp-content/themes/understrap-child/**/*',]);
+//});
 
 // Run
 // gulp dist-product
